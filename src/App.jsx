@@ -89,7 +89,7 @@ import Ending from './Ending';
         currentPhase === "instructions" ? <Instructions setCurrentPhase={setCurrentPhase} /> :
           // currentPhase === "training" ? ((trainingNumber + 1) > training_ids.length ?
           //   setCurrentPhase("transition") : trainings[trainingNumber]) :
-            currentPhase === "transition" ? <Transition setCurrentPhase={setCurrentPhase} /> :
+            // currentPhase === "transition" ? <Transition setCurrentPhase={setCurrentPhase} /> :
               currentPhase === "test" ? ((testNumber + 1) > test_ids.length ?
                 setCurrentPhase("demographics") : tests[testNumber]) :
                 currentPhase === "demographics" ? <Demographics setCurrentPhase={setCurrentPhase} /> :

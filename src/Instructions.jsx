@@ -30,7 +30,7 @@ const Instructions = (props) => {
     //the list of pages (add more as you see fit)
     const instructionTrials = [
         <TaskTutorialOne {...tutorialProps} />,
-        <TaskTutorialTwo {...tutorialProps} />
+        // <TaskTutorialTwo {...tutorialProps} />
         //<TaskTutorialThree {...tutorialProps} />,
         //<TaskTutorialFour {...tutorialProps} />,
         //<TaskTutorialFive {...tutorialProps} />,
@@ -46,7 +46,9 @@ const Instructions = (props) => {
 const TaskTutorialOne = (props) => {
 
     const handleClick = () => {
-        props.incrementTrial()
+        //props.incrementTrial()
+        props.setCurrentPhase("test");
+
     };
 
     const warning =<p style={{color:'red'}}>Please do not refresh the page while taking the study.
@@ -57,7 +59,7 @@ const TaskTutorialOne = (props) => {
         </div>;
 
 
-    const nextPageButton = <button style={buttonStyle} onClick={() => handleClick()}>Next</button>
+    const nextPageButton = <button style={buttonStyle} onClick={() => handleClick()}>Start the task.</button>
 
     return (
         <div style={textStyle}>
